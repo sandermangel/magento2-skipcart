@@ -36,10 +36,8 @@ class Plugin
     /**
      * Get resolved back url, rewritten to return checkout URL instead of cart url
      *
-     * @param \Magento\Framework\App\ActionInterface $subject
-     * @param RequestInterface $request
-     * @return void
-     * @throws \Magento\Framework\Exception\NotFoundException
+     * @param $defaultUrl
+     * @return string
      */
     protected function afterGetBackUrl($defaultUrl = null)
     {
@@ -50,8 +48,6 @@ class Plugin
 
         if ($shouldRedirectToCart && !$this->getRequest()->getParam('in_cart')) {
             return $this->_url->getUrl('checkout/index/index');
-        } else {
-            return parent::getBackUrl($defaultUrl);
         }
     }
 }
