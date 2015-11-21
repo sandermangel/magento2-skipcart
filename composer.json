@@ -1,7 +1,7 @@
 {
   "name": "sama/skipcart",
   "description": "Skip the cart page after adding a product right to checkout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://sandermangel.nl",
   "license": "OSL-3.0",
   "authors": [

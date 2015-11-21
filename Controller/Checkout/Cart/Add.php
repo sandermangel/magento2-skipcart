@@ -11,7 +11,6 @@ namespace Sama\Skipcart\Controller\Checkout\Cart;
 
 class Add extends \Magento\Checkout\Controller\Cart\Add
 {
-    use Magento\Checkout\Controller\Cart\Add;
 
     /**
      * Get resolved back url, rewritten to return checkout URL instead of cart url
