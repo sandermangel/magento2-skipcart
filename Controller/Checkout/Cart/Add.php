@@ -7,7 +7,6 @@
  * @license   OSL-3.0 - See LICENSE.md for license details.
  * @author    Sander Mangel <sander@sandermangel.nl>
  */
-
 namespace Sama\Skipcart\Controller\Checkout\Cart;
 
 class Add extends \Magento\Checkout\Controller\Cart\Add
