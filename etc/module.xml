@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sama_Skipcart extension
+ *
+ * @package   Sama_Skipcart
+ * @copyright 2015 Sander Mangel
+ * @license   OSL-3.0 - See LICENSE.md for license details.
+ * @author    Sander Mangel <sander@sandermangel.nl>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Sama_Skipcart" setup_version="0.1.0">
+        <sequence>
+            <module name="Magento_Catalog"/>
+            <module name="Magento_Checkout"/>
+        </sequence>
+    </module>
+</config>

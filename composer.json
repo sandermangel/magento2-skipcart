@@ -1,0 +1,32 @@
+{
+  "name": "sama/skipcart",
+  "description": "Skip the cart page after adding a product right to checkout",
+  "version": "0.1.0",
+  "homepage": "http://sandermangel.nl",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "name": "Sander Mangel",
+      "email": "sander@sandermangel.nl"
+    }
+  ],
+  "require": {
+    "magento/module-checkout": "~100.0.0",
+    "magento/module-catalog": "~100.0.0"
+  },
+  "type": "magento2-module",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/sandermangel/magento2-skipcart.git"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Sama\\Skipcart\\": ""
+    }
+  }
+}
