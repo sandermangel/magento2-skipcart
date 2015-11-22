@@ -10,8 +10,7 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <!--preference for="Magento\Checkout\Controller\Cart\Add" type="Sama\Skipcart\Controller\Checkout\Cart\Add" /-->
     <type name="Magento\Checkout\Controller\Cart\Add">
-        <plugin name="SamaSkipcartRedirect::after" type="Sama\Skipcart\Controller\Checkout\Cart\Plugin" sortOrder="1" />
+        <plugin name="sama_skipcart_checkout_controller_cart_add_execute_after" type="Sama\Skipcart\Controller\Checkout\Cart\Plugin" sortOrder="1" />
     </type>
 </config>

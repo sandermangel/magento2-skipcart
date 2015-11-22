@@ -36,18 +36,22 @@ class Plugin
     /**
      * Get resolved back url, rewritten to return checkout URL instead of cart url
      *
-     * @param $defaultUrl
+     * @param \Magento\Checkout\Controller\Cart\Add $subject
      * @return string
      */
-    protected function afterGetBackUrl($defaultUrl = null)
-    {
+    public function afterExecute(
+        \Magento\Checkout\Controller\Cart\Add $subject,
+        \Magento\Framework\Controller\Result\Redirect $redirect
+    ) {
         $shouldRedirectToCart = $this->_config->getValue(
             'checkout/cart/redirect_to_cart',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
 
-        if ($shouldRedirectToCart && !$this->getRequest()->getParam('in_cart')) {
-            return $this->_url->getUrl('checkout/index/index');
+        if ($shouldRedirectToCart && !$subject->getRequest()->getParam('in_cart')) {
+            $redirect->setUrl($this->_url->getUrl('checkout/index/index'));
         }
+
+        return $redirect;
     }
 }
